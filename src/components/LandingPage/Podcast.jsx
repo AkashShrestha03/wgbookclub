@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./landing.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Podcast = () => {
   return (
@@ -22,7 +23,9 @@ const Podcast = () => {
         </div>
         <div className={`${styles.writer}`}>
           <span>writer&apos;s talk</span>
-          <h1>In talks with Sebastian <br /> Bennett</h1>
+          <h1>
+            In talks with Sebastian <br /> Bennett
+          </h1>
           <p>
             Lorem ipsum dolor sit amet, ut dicat euismod invidunt pro, ne his
             dolorum molestie reprehendunt, quo luptatum evertitur ex. Altera
@@ -30,7 +33,9 @@ const Podcast = () => {
             dolores, nam et doming dicunt feugait. Ea mel scripta aperiri
             postulant. Ut sed affert audire.
           </p>
-          <button>Checkout the Library</button>
+          <button>
+            <Link href={"/podcast"}>Checkout the Library</Link>
+          </button>
         </div>
       </section>
     </div>

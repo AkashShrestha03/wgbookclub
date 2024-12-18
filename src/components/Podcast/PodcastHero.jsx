@@ -8,13 +8,13 @@ const PodcastHero = () => {
       <div className={styles["podcast-header"]}>
         <h1>Latest Podcast</h1>
       </div>
-      <section className="row">
-        <div className={`col-md-6 ${styles.video}`}>
+      <section className="">
+        <div className={` ${styles.video}`}>
           <Image src={"/img/podcast/podcast.png"} width={649} height={496} />
         </div>
-        <div className={`col-md-6 ${styles.writer}`}>
+        <div className={` mx-5 ${styles.writer}`}>
           <span>writer&apos;s talk</span>
-          <h1>In talks with Sebastian Bennett</h1>
+          <h1>In talks with Sebastian <br /> Bennett</h1>
           <p>
             Lorem ipsum dolor sit amet, ut dicat euismod invidunt pro, ne his
             dolorum molestie reprehendunt, quo luptatum evertitur ex. Altera

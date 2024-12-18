@@ -680,7 +680,11 @@
 }
 
 .podcast-container section {
-  padding: 50px 150px;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+
+  gap: 24px;
 }
 
 .podcast-header {
@@ -689,6 +693,10 @@
   align-items: center;
   width: 635px;
   color: #333333;
+}
+
+.writer{
+  width: 50%;
 }
 
 .writer span {
@@ -701,8 +709,6 @@
   color: #333333;
 }
 .writer h1 {
-  width: 504px;
-  height: 128px;
   font-style: normal;
   font-weight: 700;
   font-size: 46px;

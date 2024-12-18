@@ -10,11 +10,13 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  
+  
 }
 
 .main-header header {
   width: 100%;
+ 
 }
 
 .main-header header ul li {

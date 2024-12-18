@@ -12,17 +12,17 @@ const Podcast = () => {
           miss the insights and engaging discussion
         </p>
       </div>
-      <section className="row">
-        <div className={`col-6 col-md-6 col-sm-12 ${styles.video}`}>
+      <section className="">
+        <div className={` ${styles.video}`}>
           <Image
             src={"/img/podcast/podcast.png"}
             width={649}
             height={496}
           ></Image>
         </div>
-        <div className={`col-6 col-lg-6 col-sm-12 ${styles.writer}`}>
+        <div className={`${styles.writer}`}>
           <span>writer&apos;s talk</span>
-          <h1>In talks with Sebastian Bennett</h1>
+          <h1>In talks with Sebastian <br /> Bennett</h1>
           <p>
             Lorem ipsum dolor sit amet, ut dicat euismod invidunt pro, ne his
             dolorum molestie reprehendunt, quo luptatum evertitur ex. Altera

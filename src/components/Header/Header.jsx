@@ -13,17 +13,17 @@ const Header = () => {
             <Image src={"/logo/logo.svg"} width={190} height={87} />
           </Link>
           <div className={`col-md-6 ${styles.navbar} `}>
-            <ul className="nav-links w-100 row text-center pt-2">
+            <ul className="nav-links w-100  text-center pt-2">
               <li className="col-md-3">
                 <Link href={"/bookofthemonth"}>Book of the Month</Link>
               </li>
-              <li className="col-md-3">
+              <li className=" mx-2">
                 <Link href={"/archive"}>Archive</Link>
               </li>
-              <li className="col-md-3">
+              <li className="">
                 <Link href={"/podcast"}>Podcast</Link>
               </li>
-              <li className="col-md-3">
+              <li className="">
                 <Link href={"/about"}>About Us</Link>
               </li>
             </ul>

@@ -684,7 +684,7 @@
   display: flex;
   justify-content: center;
 
-  gap: 34px;
+  gap: 28px;
 }
 
 .podcast-header {
@@ -695,8 +695,10 @@
   color: #333333;
 }
 
+
 .writer{
   width: 50%;
+  padding-top: 50px ;
 }
 
 .writer span {

@@ -74,8 +74,7 @@ const Nominees = () => {
         toast.error("Failed to submit vote. Please try again.");
       }
     } catch (error) {
-      console.error("Error submitting vote:", error);
-      toast.error("An error occurred while submitting your vote.");
+      toast.error(error.response.data.message);
     }
   };
 

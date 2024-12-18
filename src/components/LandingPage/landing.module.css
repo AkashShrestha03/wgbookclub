@@ -69,7 +69,7 @@
 .banner-content button {
   background: #ff0081;
   border-radius: 3px;
-  border: none;
+   border: 1px solid #ff5480;
   outline: none;
   height: 48px;
   width: 170px;
@@ -77,6 +77,18 @@
   font-weight: 700;
   line-height: 24px;
   /* font-size: 24px; */
+}
+
+.banner-content button:hover {
+  border: 1px solid #ff5480;
+  color: #ff5480;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -333,6 +345,15 @@
   font-weight: 700;
   border: 1px solid #ff0081;
 }
+.nominee-header button:hover {
+ 
+  background-color: #ff0081;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 700;
+  border: 1px solid #ff0081;
+  transition: 0.3s ease-in-out;
+}
 
 .nominees-container section {
   margin-top: 50px;
@@ -438,11 +459,36 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 5px;
 }
 
 .modalBody {
   display: flex;
   flex-direction: column;
+}
+
+.modalBody button {
+  border: 1px solid #ff5480;
+  color: #fff;
+  background-color: #ff5480;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+}
+.modalBody button:hover {
+  background-color: #fff;
+  border: 1px solid #ff5480;
+  color: #ff5480;
+  transition: 0.3s ease-in-out;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
 }
 
 .inputField {
@@ -466,7 +512,6 @@
 .submitButton:hover {
   background: #0056b3;
 }
-
 
 @media (max-width: 768px) {
   .nominee-list {
@@ -692,16 +737,15 @@
     align-items: center;
   }
 
-  .podcast-container{
+  .podcast-container {
     padding: 0 55px;
   }
 
   .podcast-container section {
-  padding: 50px 0;
-  gap: 25px;
-
-}
-/* .podcast-container section .video img{
+    padding: 50px 0;
+    gap: 25px;
+  }
+  /* .podcast-container section .video img{
   width: 700px;
 
 } */

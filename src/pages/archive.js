@@ -1,16 +1,16 @@
+import Archive from "@/components/Archive/Archive";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import Landing from "@/components/LandingPage/Landing";
 import React from "react";
 
-const index = () => {
+const archive = () => {
   return (
     <>
       <Header />
-      <Landing />
+      <Archive />
       <Footer />
     </>
   );
 };
 
-export default index;
+export default archive;

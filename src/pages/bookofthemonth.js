@@ -1,16 +1,16 @@
+import BOM from "@/components/BookMonth/BOM";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import Landing from "@/components/LandingPage/Landing";
 import React from "react";
 
-const index = () => {
+const bookofthemonth = () => {
   return (
     <>
       <Header />
-      <Landing />
+      <BOM />
       <Footer />
     </>
   );
 };
 
-export default index;
+export default bookofthemonth;

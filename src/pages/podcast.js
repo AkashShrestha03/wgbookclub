@@ -1,16 +1,16 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import Landing from "@/components/LandingPage/Landing";
+import Podcast from "@/components/Podcast/Podcast";
 import React from "react";
 
-const index = () => {
+const podcast = () => {
   return (
     <>
       <Header />
-      <Landing />
+      <Podcast />
       <Footer />
     </>
   );
 };
 
-export default index;
+export default podcast;

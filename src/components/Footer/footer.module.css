@@ -1,0 +1,38 @@
+.footer-container {
+  background-color: #ff5480;
+  display: flex;
+  align-items: center;
+  padding: 10px 90px;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  height: 80px;
+  width: 100%;
+}
+.footer-container footer {
+  width: 100%;
+}
+
+.socials {
+  display: flex;
+  justify-content: end;
+  padding-right: 111px;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .footer-container footer {
+    
+    text-align: center;
+  }
+  .socials {
+    display: none;
+  }
+
+  .copyright {
+    width: 100%;
+  }
+}

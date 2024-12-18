@@ -1,16 +1,16 @@
+import About from "@/components/About/About";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import Landing from "@/components/LandingPage/Landing";
 import React from "react";
 
-const index = () => {
+const about = () => {
   return (
     <>
       <Header />
-      <Landing />
+      <About />
       <Footer />
     </>
   );
 };
 
-export default index;
+export default about;

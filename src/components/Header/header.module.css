@@ -1,0 +1,49 @@
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 90px;
+  height: 113px;
+  background-color: #ff5480;
+  color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.main-header header {
+  width: 100%;
+}
+
+.main-header header ul li {
+  list-style: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar,
+  .socials {
+    display: none;
+  }
+
+  .menu{
+    display: inline;
+  }
+}

@@ -9,16 +9,7 @@ const April = () => {
         <h1 className="text-center">April&apos;s Pick</h1>
       </div>
       <section>
-        {/* <div className={styles["april-bg"]}>
-          <Image
-            src={"/img/background/April-bg.png"}
-            width={495}
-            height={630}
-          />
-        </div> */}
-        <div
-          className={` w-100 h-100 ${styles.pick}`}
-        >
+        <div className={` w-100 h-100 ${styles.pick}`}>
           <div className={` ${styles["pick-content"]}`}>
             <h1>Why Loiter</h1>
             <span className={styles.author}>

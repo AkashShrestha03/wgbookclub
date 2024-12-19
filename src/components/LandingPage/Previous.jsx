@@ -16,7 +16,7 @@ const Previous = () => {
       </div>
 
       <section
-        style={{ backgroundImage: `url("/img/background/previous-bg.png")` }}
+     
       >
         <div className={styles["nominee-list"]}>
           <div className={styles.nominee}>

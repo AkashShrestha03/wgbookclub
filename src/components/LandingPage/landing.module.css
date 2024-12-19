@@ -8,12 +8,6 @@
   background-size: 100% 100%;
   background-position: center;
 }
-/* .hero-section .bg-hero img {
-  height: 80vh;
-  width: 100vw;
-  position: absolute;
-  z-index: -1;
-} */
 
 .hero {
   padding-top: 20px;
@@ -25,9 +19,14 @@
   align-items: center;
 }
 
+.banner-content {
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .banner-content span {
-  width: 130px;
-  height: 24px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -35,35 +34,21 @@
   letter-spacing: 5px;
   text-transform: uppercase;
   color: #333333;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 .banner-content h1 {
-  width: 470px;
-  height: 160px;
+  text-align: start;
   font-style: normal;
   font-weight: 600;
   font-size: 72px;
   line-height: 80px;
   color: #333333;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 .banner-content p {
-  width: 470px;
-  height: 77px;
-
-  /* font-family: "DM Sans"; */
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
   color: #333333;
-  flex: none;
-  order: 2;
-  flex-grow: 0;
 }
 
 .banner-content button {
@@ -104,7 +89,8 @@
 
   .hero-section {
     height: fit-content;
-    background-size: 500%;
+    background-image: none;
+    background-color: #ffff80;
   }
 
   .hero {
@@ -118,6 +104,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 }
 
@@ -193,17 +180,10 @@
 
 .april-container section {
   margin-top: 20px;
-  height: 60vh;
   width: 100vw;
   position: relative;
   background-image: url("/img/background/April-bg.png");
   background-size: 100% 100%;
-}
-.april-container .april-bg img {
-  height: 60vh;
-  width: 100vw;
-  position: absolute;
-  z-index: -1;
 }
 
 .pick {
@@ -256,7 +236,7 @@
 }
 .pick-content .schedule span {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
 
   padding: 0px;
@@ -297,12 +277,23 @@
   }
 }
 
+@media (max-width: 425px) {
+  .book-image {
+    display: none;
+  }
+
+  .pick {
+    padding: 0px;
+    justify-content: center;
+  }
+}
+
 /*------April's Pick End------*/
 
 /*--------Nominees Section--------*/
 
 .nominees-container {
-  margin-top: 50px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -316,13 +307,11 @@
 }
 
 .nominee-header {
-  /* Auto layout */
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 635px;
-  /* height: 213px; */
   color: #333333;
+  padding: 0 10px;
 }
 .nominee-header h1 {
   font-style: normal;
@@ -367,8 +356,8 @@
   display: flex;
   justify-content: space-evenly;
   gap: 29px;
-  flex-wrap: wrap;
-  padding: 0 10px;
+  flex-wrap: wrap !important;
+  padding: 0 20px;
 }
 
 .nominee {
@@ -376,8 +365,6 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  /* width: 280px; */
-  /* height: 562px; */
 }
 .nominee img {
   border-radius: 15px;
@@ -534,18 +521,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
-}
-
-.previous-container section {
-  padding: 50px 0;
-  /* height: 80vh; */
 }
 
 .previous-container section {
   margin-top: 50px;
   padding: 50px 100px;
+  background-image: url("/img/background/previous-bg.png");
+  background-size: 100% 100%;
   width: 100%;
+  background-position: center;
 }
 
 @media (max-width: 768px) {
@@ -916,8 +900,6 @@
     background-color: #ffff80;
     background-image: none;
   }
-
-
 
   .suggest-image {
     display: none;

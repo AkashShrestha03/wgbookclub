@@ -82,7 +82,7 @@ const Nominees = () => {
     <div className={styles["nominees-container"]}>
       <div className={styles["nominee-header"]}>
         <h1>
-          Book Nominees for {voteInfo.VoteMonth}
+          Book Nominees for <br />{voteInfo.VoteMonth}
         </h1>
         <p className="text-center">Theme of next discussion</p>
         <br />

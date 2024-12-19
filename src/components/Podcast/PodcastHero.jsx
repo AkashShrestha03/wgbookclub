@@ -12,7 +12,7 @@ const PodcastHero = () => {
         <div className={` ${styles.video}`}>
           <Image src={"/img/podcast/podcast.png"} width={649} height={496} />
         </div>
-        <div className={` mx-5 ${styles.writer}`}>
+        <div className={`mx-2 ${styles.writer}`}>
           <span>writer&apos;s talk</span>
           <h1>In talks with Sebastian <br /> Bennett</h1>
           <p>

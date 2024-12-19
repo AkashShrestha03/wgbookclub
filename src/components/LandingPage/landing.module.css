@@ -211,7 +211,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .pick-content {
@@ -384,7 +383,7 @@
   border-radius: 15px;
 }
 
-.nominee .details{
+.nominee .details {
   text-align: center;
 }
 
@@ -577,7 +576,6 @@
 /* -----How To Join ------ */
 .join {
   background: #ff0081;
-  /* width: 100%; */
   padding: 30px 0px;
   display: flex;
   justify-content: space-evenly;
@@ -652,7 +650,7 @@
 
 @media (max-width: 768px) {
   .join {
-    padding: 50px 0;
+    padding: 50px 20px;
     height: fit-content;
     width: 100%;
     display: flex;
@@ -699,14 +697,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 635px;
+  /* width: 635px; */
   color: #333333;
 }
 
-
-.writer{
+.writer {
   width: 50%;
-  padding-top: 50px ;
+  padding-top: 50px;
 }
 
 .writer span {
@@ -755,10 +752,8 @@
     align-items: center;
     width: 100%;
   }
-
-
   .podcast-container {
-    padding: 0 55px;
+    padding: 0 10px;
   }
 
   .podcast-container section {
@@ -766,10 +761,14 @@
     gap: 25px;
     flex-wrap: wrap;
   }
-  /* .podcast-container section .video img{
-  width: 700px;
+}
 
-} */
+@media (max-width: 425px) {
+  .podcast-container .video img,
+  .writer {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* -----Podcast Ends ------------ */
@@ -792,7 +791,7 @@
   justify-content: space-between;
   align-items: center;
   width: 70%;
-  height: 90%;
+  /* height: 90%; */
   margin-top: 40px;
 }
 
@@ -811,9 +810,6 @@
   color: #333333;
 }
 .suggest-content p {
-  /* width: 436px;
-  height: 62px; */
-
   font-style: normal;
   font-weight: 400;
   font-size: 23px;
@@ -844,8 +840,6 @@
   justify-content: center;
   align-items: center;
   gap: 25px;
-  /* width: 570px;
-  height: 263px; */
   margin-bottom: 50px;
 }
 .suggestion-container section h1 {
@@ -863,13 +857,11 @@
   color: #333333;
 }
 .suggestion-container section button {
-  margin-left: 40px;
   background: #ff0081;
   border-radius: 3px;
   width: 170px;
   border: none;
   height: 48px;
-  /* Inside auto layout */
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -882,6 +874,7 @@
   border: 1px solid #dadada;
   border-radius: 3px;
   width: 64%;
+  height: 47px;
 }
 .suggestion-container section label {
   margin-top: 10px;
@@ -915,5 +908,36 @@
   .suggest-image img {
     width: 80% !important;
     height: 80% !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .suggestion-container {
+    background-color: #ffff80;
+    background-image: none;
+  }
+
+
+
+  .suggest-image {
+    display: none;
+  }
+
+  .suggestion-container section form {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .suggestion-container section input[type="text"],
+  .suggestion-container section button {
+    width: 100%;
+  }
+
+  .suggestion-container section label {
+    padding: 0 13px;
   }
 }

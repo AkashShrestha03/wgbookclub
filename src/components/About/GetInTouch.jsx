@@ -5,7 +5,7 @@ const GetInTouch = () => {
   return (
     <div className={styles["contact-container"]}>
       <section>
-        <div className={`row justify-content-center align-items-center gap-2 p-5`}>
+        <div className={`row justify-content-center align-items-center gap-2 `}>
           <div
             className={`col-md-5 d-flex flex-column justify-content-center  ${styles["contact-text"]}`}
           >

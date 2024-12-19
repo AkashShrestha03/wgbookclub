@@ -5,12 +5,8 @@ import Image from "next/image";
 const Suggestion = () => {
   return (
     <div className={styles["suggestion-container"]}>
-      <div
-        className={`row align-items-end ${styles.suggest}`}
-      >
-        <div
-          className={` col-md-6 col-sm-6   ${styles["suggest-content"]}`}
-        >
+      <div className={`row align-items-end ${styles.suggest}`}>
+        <div className={` col-md-6 col-sm-6   ${styles["suggest-content"]}`}>
           <h1>Have suggestions for us?</h1>
           <p>
             Send us your recommendations, we are always on a outlook for good
@@ -18,7 +14,9 @@ const Suggestion = () => {
           </p>
           <button>Write to us</button>
         </div>
-        <div className={`col-md-6 col-sm-6 ${styles["suggest-image"]} text-center`}>
+        <div
+          className={`col-md-6 col-sm-6 ${styles["suggest-image"]} text-center`}
+        >
           <Image
             className="ms-5"
             src={"/img/suggestions/suggest.png"}
@@ -32,11 +30,14 @@ const Suggestion = () => {
         <p className="text-center">
           Be the first one to get the latest updates
         </p>
-        <form className="newsletter row">
-          <input type="text" className="col-md-6" placeholder="Your email" />
-          <button type="submit" col-md-6>
-            Submit
-          </button>
+        <form className="newsletter row gap-1">
+          <div className="col-md-12 row gap-2">
+            {" "}
+            <input type="text" className="col-md-6" placeholder="Your email" />
+            <button type="submit" className="col-md-5">
+              Submit
+            </button>
+          </div>
           <label htmlFor="t&c" className="col-md-6">
             <input type="checkbox" name="t&c" id="t&c" />I agree to receive
             newsletters.

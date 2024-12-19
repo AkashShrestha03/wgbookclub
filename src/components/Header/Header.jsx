@@ -34,9 +34,9 @@ const Header = () => {
             <Image src="./icons/twitter.svg" width={42} height={30} />
           </div>
         </header>
-        <div className={styles.menu}>
-          <Image src={"/icons/menu.svg"} height={25} width={35} />
-        </div>
+          <div className={` ${styles.menu}`}>
+            <Image src={"/icons/menu.svg"} height={25} width={35} />
+          </div>
       </section>
     </>
   );

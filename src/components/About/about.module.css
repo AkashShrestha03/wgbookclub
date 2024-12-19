@@ -1,7 +1,6 @@
 /* ---------Story----------- */
 
 .about-container {
-  /* height: 90vh; */
   width: 100vw;
   position: relative;
   background-image: url("/img/background/about-bg.png");
@@ -25,15 +24,11 @@
   justify-content: center;
   align-items: flex-start;
   gap: 28px;
-  padding: 150px 0;
+  padding: 150px;
   width: 50%;
 }
 
 .story h1 {
-  /* Last news */
-
-  width: 260px;
-  height: 64px;
   font-style: normal;
   font-weight: 700;
   font-size: 56px;
@@ -42,8 +37,6 @@
 }
 
 .story p {
-  width: 465px;
-  height: 352px;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -65,22 +58,27 @@
 .story-1 {
   grid-column: span 4 / span 4;
   grid-row: span 4 / span 4;
+  /* border: 1px solid black; */
 }
 .story-2 {
   grid-column: span 5 / span 5;
-  grid-row: span 7 / span 7;
+  grid-row: span 6 / span 6;
   grid-column-start: 6;
+  /* border: 1px solid black; */
 }
 .story-3 {
   grid-column: span 4 / span 4;
-  grid-row: span 7 / span 7;
+  grid-row: span 6 / span 6;
   grid-row-start: 6;
+  padding: 10px;
+  /* border: 1px solid black; */
 }
 .story-4 {
   grid-column: span 5 / span 5;
   grid-row: span 4 / span 4;
   grid-column-start: 6;
   grid-row-start: 8;
+  /* border: 1px solid black; */
 }
 
 @media (max-width: 768px) {
@@ -94,8 +92,15 @@
   }
 
   .story {
-    padding: 100px 0;
+    padding: 100px 20px;
     width: 100%;
+  }
+}
+
+@media (max-width: 425) {
+  .about-inner {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -108,22 +113,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /* justify-content: center; */
 }
 
 .values-container section {
   margin-top: 50px;
-  padding: 50px 100px;
+  padding: 50px 20px;
   width: 100%;
 }
 .value-header {
-  /* Auto layout */
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 635px;
-  /* height: 213px; */
+  gap: 10px;
+  width: 70%;
   color: #333333;
 }
 .value-header h1 {
@@ -143,7 +145,7 @@
 .value-list {
   display: flex;
   justify-content: space-evenly;
-  padding: 0 100px;
+  padding: 0 80px;
   flex-wrap: wrap;
 }
 
@@ -183,6 +185,16 @@
   color: #333333;
 }
 
+@media (max-width: 425px) {
+  .social h1 {
+    font-size: 38px;
+  }
+  .social img {
+    width: 80px;
+    height: 60px;
+  }
+}
+
 /* ----Social ends------ */
 
 /* ------Conact Get in touch ----- */
@@ -194,6 +206,10 @@
   background-size: 100% 100%;
 }
 
+ .contact-container section {
+    padding: 45px;
+  }
+
 .contact-text {
   padding: 150px 0;
 }
@@ -203,7 +219,6 @@
   font-size: 56px;
   line-height: 64px;
   color: #333333;
-  
 }
 .contact-text p {
   font-style: normal;
@@ -221,6 +236,8 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
+  max-width: 590px;
+  max-height: 677px;
 }
 
 .contact-container form button {
@@ -277,5 +294,25 @@
 }
 
 @media (max-width: 768px) {
+  .contact-text {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .contact-container form {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .contact-container form {
+    padding: 30px 20px;
+  }
+
+  .contact-container section {
+    padding: 30px 25px;
+  }
 }
 /* Contact Get in touch ended */

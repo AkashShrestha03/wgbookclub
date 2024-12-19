@@ -24,7 +24,7 @@ const ArchiveHero = () => {
             <button>Read it here</button>
           </div>
           <div
-            className={`d-flex justify-content-center align-items-center`}
+            className={`d-flex justify-content-center align-items-center ${styles.image}`}
           >
             <Image
               src={"/img/monthpick/pick-image.png"}

@@ -61,6 +61,16 @@
   color: #ff0081;
 }
 
+@media (max-width: 768px) {
+  .story{
+    width: 90%;
+    padding: 60px 0;
+  }
+  .image{
+    display: none !important;
+  }
+}
+
 /* BOM Hero ends */
 
 /* Other Nominees */
@@ -76,6 +86,8 @@
 
 .book img {
   border-radius: 7px !important;
+  height: auto;
+  width: auto;
 }
 
 .book h5 {
@@ -84,6 +96,7 @@
   font-size: 24px;
   line-height: 40px;
   color: #333333;
+  text-align: center;
 }
 
 .book p {

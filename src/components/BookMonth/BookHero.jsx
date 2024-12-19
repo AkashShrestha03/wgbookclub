@@ -7,8 +7,8 @@ const BookHero = () => {
   return (
     <div className={styles["book-container"]}>
       <section>
-        <div className={`row ${styles["book-inner"]}`}>
-          <div className={`col-md-6 d-flex flex-column  ${styles.story}`}>
+        <div className={`container ${styles["book-inner"]}`}>
+          <div className={` d-flex flex-column  ${styles.story}`}>
             <h4>Book of the Month</h4>
             <h1>Why Loiter?</h1>
             <span>
@@ -27,7 +27,7 @@ const BookHero = () => {
             </button>
           </div>
           <div
-            className={`col-md-6 d-flex justify-content-center align-items-center`}
+            className={`d-flex justify-content-center align-items-center`}
           >
             <Image
               src={"/img/monthpick/pick-image.png"}

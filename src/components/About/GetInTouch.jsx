@@ -5,9 +5,9 @@ const GetInTouch = () => {
   return (
     <div className={styles["contact-container"]}>
       <section>
-        <div className={`row p-5`}>
+        <div className={`row justify-content-center align-items-center p-5`}>
           <div
-            className={`col-md-6 d-flex flex-column justify-content-center ${styles["contact-text"]}`}
+            className={`col-md-6 d-flex flex-column justify-content-center align-items-center ${styles["contact-text"]}`}
           >
             <h1> Get in Touch with Us</h1>
             <p>

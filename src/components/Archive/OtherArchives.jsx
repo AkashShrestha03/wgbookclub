@@ -8,7 +8,7 @@ const OtherArchives = () => {
       <div className="py-3">
         <h1 className="text-center">Other Nominees</h1>
       </div>
-      <section className="d-flex flex-wrap ">
+      <section className="d-flex flex-wrap justify-content-center  ">
         <div
           className={`d-flex flex-column gap-3 align-items-center ${styles.book}`}
         >

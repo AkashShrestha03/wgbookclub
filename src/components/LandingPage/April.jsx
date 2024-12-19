@@ -17,9 +17,9 @@ const April = () => {
           />
         </div> */}
         <div
-          className={` row justify-content-center align-items-center w-100 h-100 ${styles.pick}`}
+          className={` w-100 h-100 ${styles.pick}`}
         >
-          <div className={`col-md-8 ${styles["pick-content"]}`}>
+          <div className={` ${styles["pick-content"]}`}>
             <h1>Why Loiter</h1>
             <span className={styles.author}>
               <strong className="me-2">Author: </strong>
@@ -38,7 +38,7 @@ const April = () => {
             </div>
             <button>Join Discussion</button>
           </div>
-          <div className={`${styles["book-image"]} col-md-4`}>
+          <div className={`${styles["book-image"]} `}>
             <Image
               src={"/img/monthpick/pick-image.png"}
               width={360}

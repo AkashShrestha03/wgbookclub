@@ -1,9 +1,16 @@
 .book-container {
-  height: 90vh;
+  /* height: 90vh; */
   width: 100vw;
   position: relative;
   background-image: url("/img/background/BOM-bg.png");
   background-size: 100% 100%;
+}
+
+.book-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
 }
 .story {
   display: flex;
@@ -11,8 +18,9 @@
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
-  padding: 150px 250px;
+  padding: 150px 0;
   color: #ffffff;
+  width: 50%;
 }
 
 .story h1 {
@@ -36,64 +44,66 @@
   line-height: 24px;
 }
 
-.story button{
-background: #FFFFFF;
-border: none;
-border-radius: 5px;
-width: 170px;
-height: 48px;
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 24px;
-text-align: center;
-color: #FF0081;
+.story button {
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  width: 170px;
+  height: 48px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ff0081;
+}
+.story button a {
+  color: #ff0081;
 }
 
 /* BOM Hero ends */
 
-
 /* Other Nominees */
 
-.other-container{
+.other-container {
   padding: 25px;
   margin-bottom: 50px;
 }
-.other-container section{
+.other-container section {
   padding: 20px 100px;
   gap: 55px;
 }
 
-.book img{
-border-radius: 7px !important;
+.book img {
+  border-radius: 7px !important;
 }
 
-.book h5{
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 40px;
-color: #333333;
+.book h5 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  color: #333333;
 }
 
-.book p{
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 40px;
-color: #333333;
+.book p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  color: #333333;
 }
 
-.book button{
-width: 170px;
-height: 48px;
-border: none;
-background: #0076FF;
-border-radius: 3px;
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 24px;
-text-align: center;
-color: #FFFFFF;
+.book button {
+  width: 170px;
+  height: 48px;
+  border: none;
+  background: #0076ff;
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
 }

@@ -6,8 +6,8 @@ const Story = () => {
   return (
     <div className={styles["about-container"]}>
       <section>
-        <div className={`row ${styles["about-inner"]}`}>
-          <div className={`col-md-6 d-flex flex-column  ${styles.story}`}>
+        <div className={` ${styles["about-inner"]}`}>
+          <div className={` d-flex flex-column  ${styles.story}`}>
             <h1>Our Story</h1>
             <p>
               Welcome to our community of book lovers! Our journey began with a
@@ -20,7 +20,7 @@ const Story = () => {
               readers from all walks of life.
             </p>
           </div>
-          <div className={`col-md-6 ${styles["story-grid"]}`}>
+          <div className={` ${styles["story-grid"]}`}>
             <div className={styles["story-1"]}>
               <Image src={"/img/about/story-1.png"} width={255} height={214} />
             </div>

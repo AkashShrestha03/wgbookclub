@@ -6,10 +6,10 @@ const ArchiveHero = () => {
   return (
     <div className={styles["book-container"]}>
       <section>
-        <div className={`row ${styles["book-inner"]}`}>
-          <div className={`col-md-6 d-flex flex-column  ${styles.story}`}>
-            {/* <h4>Book of the Month</h4> */}
-            <h1></h1>
+        <div className={`container ${styles["book-inner"]}`}>
+          <div className={` d-flex flex-column  ${styles.story}`}>
+            <h1>Book of the Month</h1>
+            <h4>Book Title</h4>
             <span>
               <strong>Author: </strong>
               Shilpa Phadke, Sameera Khan, Shilpa Ranade
@@ -24,7 +24,7 @@ const ArchiveHero = () => {
             <button>Read it here</button>
           </div>
           <div
-            className={`col-md-6 d-flex justify-content-center align-items-center`}
+            className={`d-flex justify-content-center align-items-center`}
           >
             <Image
               src={"/img/monthpick/pick-image.png"}

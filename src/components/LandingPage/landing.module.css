@@ -208,6 +208,10 @@
 
 .pick {
   padding: 0 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 .pick-content {
@@ -378,6 +382,10 @@
 }
 .nominee img {
   border-radius: 15px;
+}
+
+.nominee .details{
+  text-align: center;
 }
 
 .nominee .details div {
@@ -569,7 +577,7 @@
 /* -----How To Join ------ */
 .join {
   background: #ff0081;
-  width: 100%;
+  /* width: 100%; */
   padding: 30px 0px;
   display: flex;
   justify-content: space-evenly;
@@ -745,7 +753,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
+
 
   .podcast-container {
     padding: 0 55px;
@@ -754,6 +764,7 @@
   .podcast-container section {
     padding: 50px 0;
     gap: 25px;
+    flex-wrap: wrap;
   }
   /* .podcast-container section .video img{
   width: 700px;

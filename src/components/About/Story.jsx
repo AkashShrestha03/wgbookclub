@@ -7,7 +7,7 @@ const Story = () => {
     <div className={styles["about-container"]}>
       <section>
         <div className={` ${styles["about-inner"]}`}>
-          <div className={` d-flex flex-column  ${styles.story}`}>
+          <div className={`  ${styles.story}`}>
             <h1>Our Story</h1>
             <p>
               Welcome to our community of book lovers! Our journey began with a

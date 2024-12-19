@@ -100,8 +100,6 @@
     padding: 80px 0 100px 0;
   }
 
- 
-
   .banner-right {
     display: flex;
     align-items: center;
@@ -111,7 +109,7 @@
 }
 
 @media (max-width: 425px) {
-   .banner-content {
+  .banner-content {
     padding: 0 20px;
   }
 }
@@ -170,11 +168,11 @@
 
 @media (max-width: 425px) {
   .works-container section {
-  padding: 10px 50px;
-}
-.bullet{
-  gap: 20px;
-}
+    padding: 10px 50px;
+  }
+  .bullet {
+    gap: 20px;
+  }
 }
 
 /* ------How It Works End ------- */
@@ -196,8 +194,8 @@
 }
 
 .april-container section {
-  margin-top: 20px;
-  width: 100vw;
+  margin-top: 50px;
+  width: 100%;
   position: relative;
   background-image: url("/img/background/April-bg.png");
   background-size: 100% 100%;
@@ -577,6 +575,7 @@
 /* -----How To Join ------ */
 .join {
   background: #ff0081;
+  width: 100vw;
   padding: 30px 0px;
   display: flex;
   justify-content: space-evenly;

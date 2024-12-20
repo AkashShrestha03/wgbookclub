@@ -3,7 +3,7 @@ import styles from "./landing.module.css";
 import Image from "next/image";
 const Join = () => {
   return (
-    <section className={`${styles.join} row`}>
+    <section className={`${styles.join} row w-100`}>
       <div className={`col-md-6 ${styles.left}`}>
         <h1>How to Join</h1>
         <p>

@@ -80,7 +80,6 @@
   transition: 0.6s ease-in-out;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
   background-color: #381d24ab;
-
 }
 
 .list-group {
@@ -102,7 +101,8 @@
 
 .open a:hover {
   transition: 0.4s;
-  font-size: 30px;
+  
+  color: #ff5480;
 }
 @media (max-width: 768px) {
   .navbar,

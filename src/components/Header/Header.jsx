@@ -20,20 +20,20 @@ const Header = () => {
           <Link
             href={"/"}
             className="logo-container col-md-3"
-            style={{ width: "fit-content" }}
+            style={{ width: "fit-content", zIndex: 2 }}
           >
             <Image src={"/logo/logo.svg"} width={190} height={87} />
           </Link>
           <div className={`col-md-6 ${styles.navbar}`}>
             <ul className="nav-links w-100 text-center pt-2">
               <li className="col-md-3">
-                <Link href={"/bookofthemonth"}>Book of the Month</Link>
+                <Link href={"/bookofthemonth"}>Book Of The Month</Link>
               </li>
               <li className=" mx-2">
                 <Link href={"/archive"}>Archive</Link>
               </li>
               <li className="">
-                <Link href={"/podcast"}>Podcast</Link>
+                <Link href={"/podcast"}>Interview With Authors</Link>
               </li>
               <li className="">
                 <Link href={"/about"}>About Us</Link>
@@ -65,7 +65,7 @@ const Header = () => {
             <Link href={"/archive"}>Archive</Link>
           </ListGroup.Item>
           <ListGroup.Item>
-            <Link href={"/podcast"}>Podcast</Link>
+            <Link href={"/podcast"}>Interview With Authors</Link>
           </ListGroup.Item>
           <ListGroup.Item>
             <Link href={"/about"}>About Us</Link>

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 90px;
+  padding: 10px 80px;
   height: 113px;
   background-color: #ff5480;
   color: white;
@@ -26,11 +26,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .navbar ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: 35px
 }
 
 .socials {
@@ -101,7 +103,7 @@
 
 .open a:hover {
   transition: 0.4s;
-  
+
   color: #ff5480;
 }
 @media (max-width: 768px) {

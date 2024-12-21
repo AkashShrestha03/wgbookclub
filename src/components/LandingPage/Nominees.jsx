@@ -82,7 +82,8 @@ const Nominees = () => {
     <div className={styles["nominees-container"]}>
       <div className={styles["nominee-header"]}>
         <h1>
-          Book Nominees for <br />{voteInfo.VoteMonth}
+          Book Nominees for <br />
+          {voteInfo.VoteMonth}
         </h1>
         <p className="text-center">Theme of next discussion</p>
         <br />
@@ -125,7 +126,7 @@ const Nominees = () => {
         <div className={styles.modalBackdrop}>
           <div className={styles.modal}>
             <div className={styles.modalHeader}>
-              <h2>Vote for Your Favorite Book</h2>
+              <h2>Please Enter Your Email ID</h2>
               <button onClick={handleModalClose} className={styles.closeButton}>
                 &times;
               </button>

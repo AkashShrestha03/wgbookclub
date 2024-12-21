@@ -46,13 +46,19 @@ const Header = () => {
             <Image src="./icons/twitter.svg" width={42} height={30} />
           </div>
         </header>
-        <div className={`${styles.menu}`} onClick={toggleMenu}>
-          <Image src={"/icons/menu.svg"} height={25} width={35} />
-        </div>
+        {isMenuOpen ? (
+          <div className={`${styles.menu}`} onClick={toggleMenu}>
+            <Image src={"/icons/close.svg"} height={25} width={35} />
+          </div>
+        ) : (
+          <div className={`${styles.menu}`} onClick={toggleMenu}>
+            <Image src={"/icons/menu.svg"} height={25} width={35} />
+          </div>
+        )}
       </section>
       <div className={` ${isMenuOpen ? styles.open : styles.mobile}`}>
         <ListGroup>
-          <ListGroup.Item>
+          <ListGroup.Item className={styles["list-group"]}>
             <Link href={"/bookofthemonth"}>Book Of The Month</Link>
           </ListGroup.Item>
           <ListGroup.Item>

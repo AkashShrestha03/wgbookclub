@@ -12,6 +12,20 @@ a:hover {
   font-weight: 600;
 }
 
-body{
+body {
   overflow-x: hidden;
+}
+
+.list-group-item {
+  border: none;
+  text-align: center;
+}
+
+.list-group {
+  --bs-list-group-bg: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

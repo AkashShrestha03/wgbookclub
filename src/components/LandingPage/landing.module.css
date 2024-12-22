@@ -108,7 +108,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .banner-content {
     padding: 0 20px;
   }
@@ -166,7 +166,7 @@
   color: #333333;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .works-container section {
     padding: 10px 50px;
   }
@@ -292,7 +292,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .book-image {
     display: none;
   }
@@ -764,7 +764,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .podcast-container .video img,
   .writer {
     width: 100%;
@@ -912,7 +912,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .suggestion-container {
     background-color: #ffff80;
     background-image: none;

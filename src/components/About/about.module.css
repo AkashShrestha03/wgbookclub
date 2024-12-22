@@ -169,11 +169,11 @@
   text-align: center;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .value img {
- height: 300px;
- width: 280px;
-}
+    height: 300px;
+    width: 280px;
+  }
 }
 
 /* ------Core Values Ends------- */
@@ -192,7 +192,7 @@
   color: #333333;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .social h1 {
     font-size: 38px;
   }
@@ -213,9 +213,9 @@
   background-size: 100% 100%;
 }
 
- .contact-container section {
-    padding: 45px;
-  }
+.contact-container section {
+  padding: 45px;
+}
 
 .contact-text {
   padding: 150px 0;
@@ -313,7 +313,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .contact-container form {
     padding: 30px 20px;
   }

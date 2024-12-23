@@ -20,7 +20,7 @@ const Story = () => {
               readers from all walks of life.
             </p>
           </div>
-          <div className={` ${styles["story-grid"]}`}>
+          <div className={` mt-5 ${styles["story-grid"]}`}>
             <div className={styles["story-1"]}>
               <Image src={"/img/about/story-1.png"} width={255} height={214} />
             </div>

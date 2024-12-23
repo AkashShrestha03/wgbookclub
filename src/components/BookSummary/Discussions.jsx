@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./summary.module.css";
 import { Avatar, Button } from "@mui/material";
 import { Modal, Form } from "react-bootstrap";
+import toast from "react-hot-toast";
+import axios from "axios";
+import API from "@/config";
+import { useRouter } from "next/router";
 
 const Discussions = () => {
   const [showModal, setShowModal] = useState(false);
@@ -9,10 +13,31 @@ const Discussions = () => {
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
   const [typedComment, setTypedComment] = useState("");
+  const [comments, setComments] = useState([]); // State to store comments
+  const router = useRouter();
+
+  const { id } = router.query;
+
+  // Fetch comments from the API
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const response = await axios.get(`${API}/api/Comment/Get?BookID=${id}`); // Replace with your API URL
+        const data = response?.data;
+        if (data.status === 1) {
+          setComments(data?.data); // Assuming the comments are in `data.data`
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchComments();
+  }, []);
 
   const handleOpenModal = () => {
     if (typedComment.trim() === "") {
-      alert("Please enter a comment before proceeding.");
+      toast.error("Please enter a comment before proceeding.");
       return;
     }
     setComment(typedComment.trim());
@@ -25,7 +50,7 @@ const Discussions = () => {
 
   const handleSubmit = async () => {
     if (!name.trim() || !email.trim()) {
-      alert("Name and email are required.");
+      toast.error("Name and email are required.");
       return;
     }
 
@@ -36,27 +61,37 @@ const Discussions = () => {
     };
 
     try {
-      const response = await fetch("/api/comments", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
+      const response = await axios.post(
+        `${API}/api/Comment/Write?BookID=${id}`,
+        payload,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
 
-      if (response.ok) {
-        alert("Comment submitted successfully!");
+      if (response.status === 200) {
+        toast.success("Comment submitted successfully!");
         setName("");
         setEmail("");
         setTypedComment("");
         setComment("");
         setShowModal(false);
+        // Refresh comments
+        setComments((prev) => [
+          ...prev,
+          {
+            _id: response.data._id || new Date().getTime(), // Use API response ID if available
+            name,
+            email,
+            comment,
+            Timestamp: new Date().toISOString(),
+          },
+        ]);
       } else {
-        alert("Failed to submit the comment. Please try again.");
+        toast.error("Failed to submit the comment. Please try again.");
       }
     } catch (error) {
-      console.error("Error submitting the comment:", error);
-      alert("An error occurred. Please try again.");
+      toast.error("An error occurred. Please try again.");
     }
   };
 
@@ -65,22 +100,26 @@ const Discussions = () => {
       <h1>Discussions</h1>
       <section className="container d-flex flex-column gap-5">
         <main className={styles.messages}>
-          <div className={styles.comment}>
-            <span className="d-flex align-items-center gap-3">
-              <Avatar>J</Avatar>
-              <h4>John Doe</h4>
-            </span>
-            <div className={styles.message}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-              iusto facilis excepturi repellat, numquam voluptates similique
-              praesentium eum quidem deleniti atque modi, velit sunt pariatur.
-              Officiis impedit at quod mollitia?
-            </div>
-            <span>5 mins ago</span>
-          </div>
-
-          <hr />
-          {/* Repeat other comments as needed */}
+          {comments.length ? (
+            comments.map((item) => (
+              <div key={item._id} className={styles.comment}>
+                <span className="d-flex align-items-center gap-3">
+                  <Avatar>{item?.name.charAt(0).toUpperCase()}</Avatar>
+                  <h4>{item?.name}</h4>
+                </span>
+                <div className={styles?.message}>{item?.comment}</div>
+                <span>
+                  {new Date(item.Timestamp).toLocaleString("en-US", {
+                    dateStyle: "medium",
+                    timeStyle: "short",
+                  })}
+                </span>
+                <hr />
+              </div>
+            ))
+          ) : (
+            <h3>No Comments Yet!</h3>
+          )}
         </main>
         <button>Load More</button>
         <div className={styles.commentBox}>
@@ -90,7 +129,7 @@ const Discussions = () => {
             value={typedComment}
             onChange={(e) => setTypedComment(e.target.value)}
           />
-          <button className='btn btn-primary' onClick={handleOpenModal}>
+          <button className="btn btn-primary" onClick={handleOpenModal}>
             Comment
           </button>
         </div>

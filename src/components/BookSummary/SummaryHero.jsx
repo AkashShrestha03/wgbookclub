@@ -1,44 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import styles from "../BookMonth/book.module.css";
-
 import Image from "next/image";
 
-const SummaryHero = () => {
+const SummaryHero = ({ bookData }) => {
   return (
     <div className={styles["book-container"]}>
       <section>
         <div className={`container ${styles["book-inner"]}`}>
-          <div className={`d-flex flex-column  ${styles.story}`}>
-            <h1>Why Loiter?</h1>
+          <div className={`d-flex flex-column ${styles.story}`}>
+            <h1>{bookData.title}</h1>
             <span>
               <strong>Author: </strong>
-              Shilpa Phadke, Sameera Khan, Shilpa Ranade
+              {bookData.authorName}
             </span>
             <span>
               <strong>Genre: </strong>
-              Thriller / Mystery
+              {bookData.genre}
             </span>
             <span>
               <strong>Language: </strong>
-              English
+              {bookData.language}
             </span>
             <span>
-              <strong>Publication Date: </strong>
-              10 December 2024
+              <strong>Publication: </strong>
+              {bookData.publication}
             </span>
-            <p>
-              Lorem ipsum dolor sit amet, ut dicat euismod invidunt pro, ne his
-              dolorum molestie reprehendunt, quo luptatum evertitur ex. Altera
-              integre suavitate per an, alienum phaedrum te sea. Ex sea causae
-              dolores, nam et doming dicunt feugait. Ea mel scripta aperiri
-              postulant. Ut sed affert audire.
-            </p>
+            <p>{bookData.summary}</p>
           </div>
-          <div className={`d-flex justify-content-center align-items-center ${styles.image}`}>
+          <div
+            className={`d-flex justify-content-center align-items-center ${styles.image}`}
+          >
             <Image
-              src={"/img/monthpick/pick-image.png"}
+              src={bookData.BookCover}
               height={498}
               width={360}
+              alt={`Cover of ${bookData.title}`}
             />
           </div>
         </div>

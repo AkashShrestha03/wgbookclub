@@ -51,6 +51,7 @@
   align-items: center;
   gap: 25px;
   padding: 60px 150px;
+
   margin-bottom: 50px;
 }
 
@@ -63,6 +64,7 @@
 .messages {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 24px;
   max-height: 500px;
   overflow-y: hidden;

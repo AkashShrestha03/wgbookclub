@@ -4,13 +4,13 @@
   position: relative;
   background-image: url("/img/background/BOM-bg.png");
   background-size: 100% 100%;
+
 }
 
 .book-inner {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 .story {
   display: flex;
@@ -61,12 +61,16 @@
   color: #ff0081;
 }
 
+.image img{
+  border-radius: 15px;
+}
+
 @media (max-width: 768px) {
-  .story{
+  .story {
     width: 90%;
     padding: 60px 0;
   }
-  .image{
+  .image {
     display: none !important;
   }
 }
@@ -86,8 +90,7 @@
 
 .book img {
   border-radius: 7px !important;
-  height: auto;
-  width: auto;
+
 }
 
 .book h5 {
@@ -103,7 +106,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 40px;
+  /* line-height: 40px; */
   color: #333333;
 }
 

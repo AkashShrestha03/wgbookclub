@@ -10,10 +10,7 @@
   width: 95%;
 }
 
-/* .video img{
-  width: 60%;
-  height: 60%;
-} */
+
 
 .list h1 {
   font-style: normal;
@@ -63,6 +60,10 @@
   .podcast-details p {
     max-height: 163px;
   }
+
+  .video iframe {
+    width: 100%;
+  }
 }
 @media (max-width: 450px) {
   .video {
@@ -71,7 +72,7 @@
     width: 100%;
   }
 
-  .video img {
+  .video iframe {
     width: 100%;
   }
   .podcast-details p {

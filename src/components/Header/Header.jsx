@@ -99,15 +99,25 @@ const Header = () => {
         )}
       </section>
       <div className={` ${isMenuOpen ? styles.open : styles.mobile}`}>
-        <ListGroup>
-          <ListGroup.Item className={styles["list-group"]}>
+        <ListGroup className={styles["list-group"]}>
+          <ListGroup.Item>
             <Link href={"/bookofthemonth"}>Book Of The Month</Link>
           </ListGroup.Item>
           <ListGroup.Item>
-            <Link href={"/archive"}>Archive</Link>
+            <Link href={"/archive/bookofthemonth"}>
+              Archive <br /> Book Of The Month
+            </Link>
           </ListGroup.Item>
           <ListGroup.Item>
-            <Link href={"/podcast"}>Interview With Authors</Link>
+            <Link href={"/archive/nominees"}>
+              Archive <br /> Nominees
+            </Link>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <Link href={"/podcast"}>
+              Interview <br />
+              With Authors
+            </Link>
           </ListGroup.Item>
           <ListGroup.Item>
             <Link href={"/about"}>About Us</Link>

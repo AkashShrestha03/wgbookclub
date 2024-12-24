@@ -51,7 +51,7 @@ const OtherNominees = () => {
               width={320}
               height={410}
             />
-            <h4>{nominee.Booktitle}</h4>
+            <h4>{nominee.title}</h4>
             <p className="fw-bold">{nominee.AuthorName}</p>
             <p className="text-muted">
               {nominee.Month}, {nominee.Year}

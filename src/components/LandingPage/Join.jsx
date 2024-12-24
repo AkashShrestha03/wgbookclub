@@ -10,7 +10,7 @@ const Join = () => {
           Interested in joining us? It&apos;s easy! Just click the links below
           to join our email list or connect with us on WhatsApp.
         </p>
-        <button>Join us now</button>
+        <button className={styles["join-mobile"]}>Join us now</button>
       </div>
       <div className={`col-md-6 ${styles.right}`}>
         <div className={styles.email}>

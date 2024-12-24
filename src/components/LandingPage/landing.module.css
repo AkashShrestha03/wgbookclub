@@ -245,6 +245,10 @@
   color: #ffffff;
 }
 
+.book-image img {
+  border-radius: 15px;
+}
+
 .pick-content .schedule {
   display: flex;
   gap: 70px;
@@ -289,6 +293,7 @@
   .book-image img {
     height: 315px;
     width: 228px;
+    border-radius: 15px;
   }
 }
 
@@ -649,6 +654,10 @@
   font-weight: 600;
 }
 
+.join-mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .join {
     padding: 50px 20px;
@@ -661,6 +670,9 @@
     gap: 0;
   }
 
+  .join-mobile {
+    display: block;
+  }
   .join .left {
     display: flex;
     width: 100%;

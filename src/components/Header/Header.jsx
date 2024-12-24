@@ -47,7 +47,7 @@ const Header = () => {
                 {isDropdownOpen && (
                   <ul className={styles["dropdown-menu"]}>
                     <li>
-                      <Link href={"/archive/bookfofthemonth"}>
+                      <Link href={"/archive/bookofthemonth"}>
                         Book Of The Month <br />Archive
                       </Link>
                     </li>

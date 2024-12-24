@@ -8,9 +8,31 @@ import Link from "next/link";
 
 const April = () => {
   const [nominees, setNominees] = useState([]);
+  const [voteInfo, setVoteInfo] = useState({ VoteYear: "", VoteMonth: "" });
+  const [pollStatus, setPollStatus] = useState(false);
   const router = useRouter(); // Use the router hook
 
   useEffect(() => {
+    const fetchFilterInfo = async () => {
+      try {
+        const response = await axios.get(`${API}/api/Filter/Get`, {
+          headers: {
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWMyZWMwODY4ZjdhZGMyYTU5MjYwZiIsInJvbGUiOiJBRE1JTiIsImZpcnN0bmFtZSI6IkFkbWluIiwibGFzdG5hbWUiOiJCb29rIiwiZW1haWwiOiJBZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MzUwMjU1ODcsImV4cCI6MTczNTExMTk4N30.Oz91eARkvoFMRGtsTHyojgRHDs5UGA36KGAQi8aTOoQ`,
+          },
+        });
+        const data = response.data;
+        if (data.status === 1 && data.data) {
+          setPollStatus(data?.data?.discussion);
+          setVoteInfo({
+            VoteYear: data.data.year,
+            VoteMonth: data.data.month,
+          });
+        }
+      } catch (error) {
+        console.error("Error fetching filter info:", error);
+      }
+    };
+
     // Fetch data from the API
     const fetchNominees = async () => {
       try {
@@ -25,7 +47,7 @@ const April = () => {
         console.error("Error fetching nominees:", error);
       }
     };
-
+    fetchFilterInfo();
     fetchNominees();
   }, []);
 
@@ -54,9 +76,11 @@ const April = () => {
                 (IST)
               </span>
             </div>
-            <button onClick={() => router.push(nominees?.DiscussionLink)}>
-              Join Discussion
-            </button>
+            {pollStatus && (
+              <button onClick={() => router.push(nominees?.DiscussionLink)}>
+                Join Discussion
+              </button>
+            )}
           </div>
           <div className={`${styles["book-image"]} `}>
             <Image src={nominees?.BookCover} width={360} height={498} />

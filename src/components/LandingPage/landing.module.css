@@ -413,6 +413,10 @@
   color: #ff0081;
 }
 
+.closedMessage{
+  margin: 40px 0;
+}
+
 /* .nominee img{
   width: 100%;
 } */

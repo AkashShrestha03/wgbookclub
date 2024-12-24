@@ -42,7 +42,9 @@ const Previous = () => {
           at nihil tantas platonem eos.
         </p>
         <br />
-        <button>See All</button>
+        <button onClick={() => router.push("/archive/bookofthemonth")}>
+          See All
+        </button>
       </div>
 
       <section>

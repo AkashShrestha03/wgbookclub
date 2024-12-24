@@ -15,11 +15,16 @@ const Podcast = () => {
       </div>
       <section className="">
         <div className={` ${styles.video}`}>
-          <Image
-            src={"/img/podcast/podcast.png"}
-            width={649}
-            height={496}
-          ></Image>
+          <iframe
+            width="649"
+            height="496"
+            src="https://www.youtube.com/embed/FcwH7UpXHAk?si=fKx2NrFfNnNOTMVP"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
         <div className={`${styles.writer}`}>
           <span>writer&apos;s talk</span>

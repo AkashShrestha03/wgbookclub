@@ -7,9 +7,18 @@ import { ListGroup } from "react-bootstrap";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -29,8 +38,24 @@ const Header = () => {
               <li className="col-md-3">
                 <Link href={"/bookofthemonth"}>Book Of The Month</Link>
               </li>
-              <li className=" mx-2">
-                <Link href={"/archive"}>Archive</Link>
+              <li
+                className={`mx-2 ${styles.dropdown}`}
+                onMouseEnter={toggleDropdown}
+                onMouseLeave={closeDropdown}
+              >
+                <span className={styles["dropdown-toggle"]}>Archive</span>
+                {isDropdownOpen && (
+                  <ul className={styles["dropdown-menu"]}>
+                    <li>
+                      <Link href={"/archive/bookfofthemonth"}>
+                        Book Of The Month <br />Archive
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/archive/nominees"}>Nominees Archive</Link>
+                    </li>
+                  </ul>
+                )}
               </li>
               <li className="">
                 <Link href={"/podcast"}>Interview With Authors</Link>

@@ -8,18 +8,19 @@ import Link from "next/link";
 
 const April = () => {
   const [nominees, setNominees] = useState([]);
+  const [book, setBook] = useState({});
   const [voteInfo, setVoteInfo] = useState({ VoteYear: "", VoteMonth: "" });
   const [pollStatus, setPollStatus] = useState(false);
   const router = useRouter(); // Use the router hook
 
   useEffect(() => {
+    const fetchBOM = async () => {
+      const response = await axios.get(`${API}/api/Book/Won/Get/Winner/Admin`);
+      setBook(response?.data?.data[0]);
+    };
     const fetchFilterInfo = async () => {
       try {
-        const response = await axios.get(`${API}/api/Filter/Get`, {
-          headers: {
-            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWMyZWMwODY4ZjdhZGMyYTU5MjYwZiIsInJvbGUiOiJBRE1JTiIsImZpcnN0bmFtZSI6IkFkbWluIiwibGFzdG5hbWUiOiJCb29rIiwiZW1haWwiOiJBZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MzUwMjU1ODcsImV4cCI6MTczNTExMTk4N30.Oz91eARkvoFMRGtsTHyojgRHDs5UGA36KGAQi8aTOoQ`,
-          },
-        });
+        const response = await axios.get(`${API}/api/Filter/Get`);
         const data = response.data;
         if (data.status === 1 && data.data) {
           setPollStatus(data?.data?.discussion);
@@ -48,13 +49,14 @@ const April = () => {
       }
     };
     fetchFilterInfo();
+    fetchBOM();
     fetchNominees();
   }, []);
 
   return (
     <div className={styles["april-container"]}>
       <div className={styles["april-head"]}>
-        <h1 className="text-center">April&apos;s Pick</h1>
+        <h1 className="text-center">{book?.Month}&apos;s Pick</h1>
       </div>
       <section>
         <div className={` w-100 h-100 ${styles.pick}`}>

@@ -12,7 +12,15 @@ const Join = () => {
           Interested in joining us? It&apos;s easy! Just click the links below
           to join our email list or connect with us on WhatsApp.
         </p>
-        <button className={styles["join-mobile"]}>Join us now</button>
+        <button
+          onClick={() =>
+            router.push(`https://docs.google.com/forms/d/e/1FAIpQLSdgad96r7eAAXKmKd8s6Q2xYK6eB1jqjTGYzLrW21YHKxrYBA/viewform
+`)
+          }
+          className={styles["join-mobile"]}
+        >
+          Join us now
+        </button>
       </div>
       <div className={`col-md-6 ${styles.right}`}>
         <div className={styles.email}>

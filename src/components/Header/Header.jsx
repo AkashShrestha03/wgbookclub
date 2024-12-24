@@ -48,7 +48,8 @@ const Header = () => {
                   <ul className={styles["dropdown-menu"]}>
                     <li>
                       <Link href={"/archive/bookofthemonth"}>
-                        Book Of The Month <br />Archive
+                        Book Of The Month <br />
+                        Archive
                       </Link>
                     </li>
                     <li>
@@ -66,9 +67,25 @@ const Header = () => {
             </ul>
           </div>
           <div className={`col-md-3 ${styles.socials}`}>
-            <Image src="./icons/youtube.svg" width={42} height={30} />
-            <Image src="./icons/insta.svg" width={42} height={30} />
-            <Image src="./icons/twitter.svg" width={42} height={30} />
+            <Link
+              href={`https://youtube.com/@womenandgenderbookclub?si=2HU7FgkXVnn7Mbz9
+`}
+            >
+              {" "}
+              <Image src="./icons/youtube.svg" width={42} height={30} />
+            </Link>
+            <Link
+              href={`#
+`}
+            >
+              <Image src="./icons/insta.svg" width={42} height={30} />
+            </Link>
+            <Link
+              href={`https://x.com/WGBookClub2023
+`}
+            >
+              <Image src="./icons/X-white.svg" width={42} height={32} />
+            </Link>
           </div>
         </header>
         {isMenuOpen ? (

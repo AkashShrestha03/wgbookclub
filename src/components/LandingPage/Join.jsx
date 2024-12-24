@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./landing.module.css";
 import Image from "next/image";
+import { useRouter } from "next/router";
 const Join = () => {
+  const router = useRouter();
   return (
     <section className={`${styles.join} row w-100`}>
       <div className={`col-md-6 ${styles.left}`}>
@@ -14,10 +16,21 @@ const Join = () => {
       </div>
       <div className={`col-md-6 ${styles.right}`}>
         <div className={styles.email}>
-          <button>Join via Email</button>
+          <button
+            onClick={() =>
+              router.push(`https://docs.google.com/forms/d/e/1FAIpQLSdgad96r7eAAXKmKd8s6Q2xYK6eB1jqjTGYzLrW21YHKxrYBA/viewform
+`)
+            }
+          >
+            Join via Email
+          </button>
         </div>
         <div className={styles.whatsapp}>
-          <button>
+          <button
+            onClick={() =>
+              router.push(`https://chat.whatsapp.com/LBjuzyzFcFLKG1Mv3Id7vk`)
+            }
+          >
             <Image src={"/icons/whatsapp.svg"} width={48} height={27}></Image>{" "}
             Join via Whatsapp
           </button>

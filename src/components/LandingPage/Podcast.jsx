@@ -7,7 +7,7 @@ const Podcast = () => {
   return (
     <div className={styles["podcast-container"]}>
       <div className={styles["podcast-header"]}>
-        <h1>Latest Podcast</h1>
+        <h1>Latest Interview</h1>
         <p className="text-center">
           Catch up on our most recent session with [Author Name]. Don&apos;t
           miss the insights and engaging discussion
@@ -28,9 +28,7 @@ const Podcast = () => {
         </div>
         <div className={`${styles.writer}`}>
           <span>writer&apos;s talk</span>
-          <h1>
-            In talks with Sebastian <br /> Bennett
-          </h1>
+          <h1>Why Loiter & Yaari</h1>
           <p>
             Lorem ipsum dolor sit amet, ut dicat euismod invidunt pro, ne his
             dolorum molestie reprehendunt, quo luptatum evertitur ex. Altera

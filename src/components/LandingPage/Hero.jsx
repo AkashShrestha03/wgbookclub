@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./landing.module.css";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Hero = () => {
+  const router = useRouter();
   return (
     <div className={styles["hero-section"]}>
       <section className="container">
@@ -23,7 +25,14 @@ const Hero = () => {
                 Discover, Discuss, and Delight in Books with Fellow Avid
                 Readers.
               </p>
-              <button>Join Us</button>
+              <button
+                onClick={() =>
+                  router.push(`https://docs.google.com/forms/d/e/1FAIpQLSdgad96r7eAAXKmKd8s6Q2xYK6eB1jqjTGYzLrW21YHKxrYBA/viewform
+`)
+                }
+              >
+                Join Us
+              </button>
             </div>
           </div>
         </div>

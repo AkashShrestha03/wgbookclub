@@ -98,7 +98,7 @@ const Nominees = () => {
       <div className={styles["nominee-header"]}>
         <h1>
           Book Nominees for <br />
-          {voteInfo.VoteMonth}
+          {voteInfo.VoteMonth},{voteInfo.VoteYear}
         </h1>
         <p className="text-center">Theme of next discussion</p>
         <br />
@@ -140,7 +140,7 @@ const Nominees = () => {
         </section>
       ) : (
         <div className={styles.closedMessage}>
-          <h2>Voting has been closed for now. Please check back later.</h2>
+          <h2 className="text-center">Voting has been closed for now. Please check back later.</h2>
         </div>
       )}
 

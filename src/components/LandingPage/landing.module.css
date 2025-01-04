@@ -184,12 +184,10 @@
 }
 
 .april-container .april-head h1 {
-  /* font-family: 'Open Sans'; */
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 65px;
-  /* text-align: center; */
   color: #333333;
 }
 
@@ -216,7 +214,6 @@
 }
 
 .pick-content h1 {
-  /* font-family: 'DM Sans'; */
   font-style: normal;
   font-weight: 700;
   font-size: 66px;
@@ -225,7 +222,6 @@
 }
 
 .pick-content .author {
-  /* font-family: 'DM Sans'; */
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -237,7 +233,6 @@
 }
 
 .pick-content h4 {
-  /* font-family: 'DM Sans'; */
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -257,7 +252,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
   padding: 0px;
   gap: 24px;
   font-weight: 400;
@@ -276,6 +270,26 @@
   line-height: 24px;
 }
 
+@media (max-width: 1024px) {
+  .april-container section {
+ 
+    height: fit-content;
+    padding: 70px;
+  }
+
+  .pick {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .book-image img {
+    height: 398px;
+    width: 290px;
+    border-radius: 15px;
+  }
+}
 @media (max-width: 768px) {
   .april-container section {
     background: #ff0081;
@@ -413,7 +427,7 @@
   color: #ff0081;
 }
 
-.closedMessage{
+.closedMessage {
   margin: 40px 0;
 }
 
@@ -589,6 +603,7 @@
   padding: 30px 0px;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .join .left {
@@ -662,6 +677,28 @@
   display: none;
 }
 
+@media (max-width: 1024px) {
+  .join {
+    padding: 50px 20px;
+  }
+  .join .left {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 25px;
+  }
+
+  .join .right {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+}
 @media (max-width: 768px) {
   .join {
     padding: 50px 20px;
@@ -761,6 +798,28 @@
   color: #ffffff;
 }
 
+@media (max-width: 1024px) {
+  .podcast-container section {
+    display: flex;
+  }
+
+  .video iframe {
+    width: 549px;
+  }
+  .writer {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+  .podcast-container {
+    padding: 0 10px;
+  }
+
+  .podcast-container section {
+    padding: 50px 0;
+    gap: 25px;
+  }
+}
 @media (max-width: 768px) {
   .writer {
     text-align: center;

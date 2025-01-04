@@ -5,8 +5,8 @@ import { useRouter } from "next/router";
 const Join = () => {
   const router = useRouter();
   return (
-    <section className={`${styles.join} row w-100`}>
-      <div className={`col-md-6 ${styles.left}`}>
+    <section className={`${styles.join}`}>
+      <div className={`${styles.left}`}>
         <h1>How to Join</h1>
         <p>
           Interested in joining us? It&apos;s easy! Just click the links below
@@ -22,7 +22,7 @@ const Join = () => {
           Join us now
         </button>
       </div>
-      <div className={`col-md-6 ${styles.right}`}>
+      <div className={`${styles.right}`}>
         <div className={styles.email}>
           <button
             onClick={() =>

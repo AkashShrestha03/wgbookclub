@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import styles from "./footer.module.css"
-import Link from 'next/link';
+import Image from "next/image";
+import styles from "./footer.module.css";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <section className={styles["footer-container"]}>
       <footer className="row">
         <div className={`col-md-6 ${styles.copyright}`}>
-          © Copyright 2024. yuktidea All Right Reserved
+          © Copyright {new Date().getFullYear()}. yuktidea All Right Reserved
         </div>
         <div className={`${styles.socials} col-md-6`}>
           <Link
@@ -33,6 +33,6 @@ const Footer = () => {
       </footer>
     </section>
   );
-}
+};
 
-export default Footer
+export default Footer;

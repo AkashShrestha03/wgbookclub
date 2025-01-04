@@ -98,7 +98,7 @@ const Nominees = () => {
       <div className={styles["nominee-header"]}>
         <h1>
           Book Nominees for <br />
-          {voteInfo.VoteMonth},{voteInfo.VoteYear}
+          {voteInfo.VoteMonth}, {voteInfo.VoteYear}
         </h1>
         <p className="text-center">Theme of next discussion</p>
         <br />

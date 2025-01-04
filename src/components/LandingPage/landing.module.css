@@ -849,9 +849,6 @@
 }
 
 .suggestion-container section {
-  /* Frame 39943 */
-
-  /* Auto layout */
   display: flex;
   flex-direction: column;
   justify-content: center;

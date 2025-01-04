@@ -175,6 +175,10 @@
     height: 300px;
     width: 280px;
   }
+
+  .value-list {
+    padding: 0;
+  }
 }
 
 /* ------Core Values Ends------- */

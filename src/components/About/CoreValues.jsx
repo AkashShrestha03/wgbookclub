@@ -14,7 +14,7 @@ const CoreValues = () => {
         </p>
       </div>
 
-      <section>
+      <section className="">
         <div className={styles["value-list"]}>
           <div className={styles.value}>
             <Image src={"/img/about/value.png"} height={368} width={342} />

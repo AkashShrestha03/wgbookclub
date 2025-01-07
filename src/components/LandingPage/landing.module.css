@@ -61,7 +61,15 @@
   color: #fff;
   font-weight: 700;
   line-height: 24px;
+   transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   /* font-size: 24px; */
+}
+
+.banner-content button:hover{
+  background-color: #fff;
+  border: 1px solid #ff0081;
+  color: #ff0081;
 }
 
 .banner-content button:hover {
@@ -805,7 +813,7 @@
   line-height: 24px;
   text-align: center;
   color: #ffffff;
-   transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -813,7 +821,6 @@
   background-color: #fff;
   border: 1px solid #ff5480;
   color: #ff5480;
- 
 }
 
 @media (max-width: 1024px) {
@@ -923,6 +930,14 @@
   border: none;
   text-align: center;
   color: #ffffff;
+  transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.suggest-content button:hover {
+  color: #ff0081;
+  background-color: #fff;
+  border: 1px solid #ff0081;
 }
 
 .suggestion-container section {
@@ -947,7 +962,7 @@
   line-height: 24px;
   color: #333333;
 }
-.suggestion-container section button {
+.suggestion-container button {
   background: #ff0081;
   border-radius: 3px;
   width: 170px;
@@ -958,7 +973,15 @@
   font-size: 16px;
   line-height: 24px;
   color: #fff;
+  transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.suggestion-container button:hover {
+  color: #ff0081;
+  background-color: #fff;
+  border: 1px solid #ff0081;
+}
+
 .suggestion-container section input[type="text"] {
   box-sizing: border-box;
   background: #ffffff;

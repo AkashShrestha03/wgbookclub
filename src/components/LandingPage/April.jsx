@@ -69,11 +69,11 @@ const April = () => {
             <h4>Discussion Details</h4>
             <div className={`${styles.schedule}  `}>
               <span>
-                <Image src={"/icons/clock.svg"} width={32} height={32} />
+                <Image src={"/icons/calendar.svg"} width={32} height={32} />
                 {nominees?.DiscussionDate}
               </span>
               <span>
-                <Image src={"/icons/calendar.svg"} width={32} height={32} />
+                <Image src={"/icons/clock.svg"} width={32} height={32} />
                 {nominees?.DiscussionStartTime} -{nominees?.DiscussionEndTime}
                 (IST)
               </span>

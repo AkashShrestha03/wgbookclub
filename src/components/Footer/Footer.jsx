@@ -15,19 +15,19 @@ const Footer = () => {
 `}
           >
             {" "}
-            <Image src="./icons/youtube.svg" width={42} height={30} />
+            <Image src="/icons/youtube.svg" width={42} height={30} />
           </Link>
           <Link
             href={`#
 `}
           >
-            <Image src="./icons/insta.svg" width={42} height={30} />
+            <Image src="/icons/insta.svg" width={42} height={30} />
           </Link>
           <Link
             href={`https://x.com/WGBookClub2023
 `}
           >
-            <Image src="./icons/X-white.svg" width={42} height={32} />
+            <Image src="/icons/X-white.svg" width={42} height={32} />
           </Link>
         </div>
       </footer>

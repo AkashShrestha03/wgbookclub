@@ -10,6 +10,11 @@
   width: 95%;
 }
 
+.video-list iframe{
+  width: 460px;
+  height: 315px;
+}
+
 
 
 .list h1 {
@@ -32,7 +37,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 64px;
+  line-height: 38px;
   color: #333333;
 }
 

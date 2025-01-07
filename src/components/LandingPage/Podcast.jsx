@@ -3,11 +3,13 @@ import styles from "./landing.module.css";
 import Link from "next/link";
 import API from "@/config";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 const Podcast = () => {
   const [Interviews, setInterviews] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const router = useRouter()
 
   useEffect(() => {
     const fetchInterview = async () => {
@@ -45,8 +47,8 @@ const Podcast = () => {
           <span>writer&apos;s talk</span>
           <h1>{Interviews?.title}</h1>
           <p>{Interviews?.description}</p>
-          <button>
-            <Link href={"/podcast"}>Checkout the Library</Link>
+          <button onClick={()=>router.push("/podcast")}>
+           Checkout the Library
           </button>
         </div>
       </section>

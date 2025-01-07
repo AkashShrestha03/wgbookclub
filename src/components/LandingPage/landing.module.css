@@ -272,7 +272,6 @@
 
 @media (max-width: 1024px) {
   .april-container section {
- 
     height: fit-content;
     padding: 70px;
   }
@@ -454,6 +453,16 @@
   font-weight: 600;
   line-height: 24px;
   text-align: center;
+  transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.nominee .details button:hover {
+  background-color: #fff;
+  border: 1px solid #ff5480;
+  color: #ff5480;
+  transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .modalBackdrop {
@@ -796,6 +805,15 @@
   line-height: 24px;
   text-align: center;
   color: #ffffff;
+   transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.writer button:hover {
+  background-color: #fff;
+  border: 1px solid #ff5480;
+  color: #ff5480;
+ 
 }
 
 @media (max-width: 1024px) {

@@ -14,6 +14,7 @@ const Discussions = () => {
   const [comment, setComment] = useState("");
   const [typedComment, setTypedComment] = useState("");
   const [comments, setComments] = useState([]); // State to store comments
+  const [visibleCount, setVisibleCount] = useState(2); // State for visible comments count
   const router = useRouter();
 
   const { id } = router.query;
@@ -22,7 +23,7 @@ const Discussions = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await axios.get(`${API}/api/Comment/Get?BookID=${id}`); // Replace with your API URL
+        const response = await axios.get(`${API}/api/Comment/Get?BookID=${id}`);
         const data = response?.data;
         if (data.status === 1) {
           setComments(data?.data); // Assuming the comments are in `data.data`
@@ -33,7 +34,7 @@ const Discussions = () => {
     };
 
     fetchComments();
-  }, []);
+  }, [id]);
 
   const handleOpenModal = () => {
     if (typedComment.trim() === "") {
@@ -95,33 +96,38 @@ const Discussions = () => {
     }
   };
 
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 2);
+  };
+
   return (
     <div className={styles["discussion-container"]}>
       <h1>Discussions</h1>
       <section className="container d-flex flex-column gap-5">
         <main className={styles.messages}>
-          {comments.length ? (
-            comments.map((item) => (
-              <div key={item._id} className={styles.comment}>
-                <span className="d-flex align-items-center gap-3">
-                  <Avatar>{item?.name.charAt(0).toUpperCase()}</Avatar>
-                  <h4>{item?.name}</h4>
-                </span>
-                <div className={styles?.message}>{item?.comment}</div>
-                <span>
-                  {new Date(item.Timestamp).toLocaleString("en-US", {
-                    dateStyle: "medium",
-                    timeStyle: "short",
-                  })}
-                </span>
-                <hr />
-              </div>
-            ))
-          ) : (
-            <h3>No Comments Yet!</h3>
-          )}
+          {comments.slice(0, visibleCount).map((item) => (
+            <div key={item._id} className={styles.comment}>
+              <span className="d-flex align-items-center gap-3">
+                <Avatar>{item?.name.charAt(0).toUpperCase()}</Avatar>
+                <h4>{item?.name}</h4>
+              </span>
+              <div className={styles?.message}>{item?.comment}</div>
+              <span>
+                {new Date(item.Timestamp).toLocaleString("en-US", {
+                  dateStyle: "medium",
+                  timeStyle: "short",
+                })}
+              </span>
+              <hr />
+            </div>
+          ))}
+          {comments.length === 0 && <h3>No Comments Yet!</h3>}
         </main>
-        <button>Load More</button>
+        {visibleCount < comments.length && (
+          <button onClick={handleLoadMore} className="btn btn-secondary">
+            Load More
+          </button>
+        )}
         <div className={styles.commentBox}>
           <input
             type="text"

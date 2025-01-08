@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -26,3 +27,7 @@ body {
   align-items: center;
 }
 
+.active {
+  transform: scale(1.1);
+  font-weight: 700;
+}

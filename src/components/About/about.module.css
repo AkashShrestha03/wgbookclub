@@ -83,8 +83,6 @@
 }
 
 @media (max-width: 1024px) {
- 
-
   .about-inner {
     display: flex;
     justify-content: center;
@@ -96,42 +94,42 @@
   }
 
   .story-grid img {
-  border-radius: 20px;
-  width: 97%;
-  height: 97%;
-}
+    border-radius: 20px;
+    width: 97%;
+    height: 97%;
+  }
 
   .story-1 {
-  grid-column: span 4 / span 4;
-  grid-row: span 4 / span 4;
-  width: fit-content;
-  /* border: 1px solid black; */
-}
-.story-2 {
-  grid-column: span 5 / span 5;
-  grid-row: span 6 / span 6;
-  grid-column-start: 5;
-   height: fit-content;
-   width: fit-content;
-  /* border: 1px solid black; */
-}
-.story-3 {
-  grid-column: span 4 / span 4;
-  grid-row: span 6 / span 6;
-  grid-row-start: 5;
-  padding: 10px;
-  width: fit-content;
-  /* border: 1px solid black; */
-}
-.story-4 {
-  grid-column: span 5 / span 5;
-  grid-row: span 4 / span 4;
-  grid-column-start: 5;
-  grid-row-start: 7;
-   height: fit-content;
-   margin-top: 10px;
-  /* border: 1px solid black; */
-}
+    grid-column: span 4 / span 4;
+    grid-row: span 4 / span 4;
+    width: fit-content;
+    /* border: 1px solid black; */
+  }
+  .story-2 {
+    grid-column: span 5 / span 5;
+    grid-row: span 6 / span 6;
+    grid-column-start: 5;
+    height: fit-content;
+    width: fit-content;
+    /* border: 1px solid black; */
+  }
+  .story-3 {
+    grid-column: span 4 / span 4;
+    grid-row: span 6 / span 6;
+    grid-row-start: 5;
+    padding: 10px;
+    width: fit-content;
+    /* border: 1px solid black; */
+  }
+  .story-4 {
+    grid-column: span 5 / span 5;
+    grid-row: span 4 / span 4;
+    grid-column-start: 5;
+    grid-row-start: 7;
+    height: fit-content;
+    margin-top: 10px;
+    /* border: 1px solid black; */
+  }
 }
 @media (max-width: 768px) {
   .story-grid {
@@ -315,6 +313,13 @@
   line-height: 25px;
   letter-spacing: 0.5px;
   color: #ffffff;
+  transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.contact-container form button:hover {
+  border: 1px solid #ff0081;
+  background: #fff;
+  color: #ff0081;
 }
 
 .input input::placeholder,

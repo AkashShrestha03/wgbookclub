@@ -4,10 +4,12 @@ import styles from "./header.module.css";
 import Link from "next/link";
 import { Toaster } from "react-hot-toast";
 import { ListGroup } from "react-bootstrap";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -20,6 +22,12 @@ const Header = () => {
   const closeDropdown = () => {
     setIsDropdownOpen(false);
   };
+
+  const BOM = router.pathname === "/bookofthemonth";
+  const about = router.pathname === "/about";
+  const archive_1 = router.pathname === "/archive/bookofthemonth";
+  const archive_2 = router.pathname === "/archive/nominees";
+  const interview = router.pathname === "/podcast";
 
   return (
     <>
@@ -35,7 +43,7 @@ const Header = () => {
           </Link>
           <div className={`col-md-6 ${styles.navbar}`}>
             <ul className="nav-links w-100 text-center pt-2">
-              <li className="col-md-3">
+              <li className={`col-md-3 ${BOM && "active"}`}>
                 <Link href={"/bookofthemonth"}>Book Of The Month</Link>
               </li>
               <li
@@ -43,7 +51,13 @@ const Header = () => {
                 onMouseEnter={toggleDropdown}
                 onMouseLeave={closeDropdown}
               >
-                <span className={styles["dropdown-toggle"]}>Archive</span>
+                <span
+                  className={`${styles["dropdown-toggle"]} ${
+                    (archive_1 && "active") || (archive_2 && "active")
+                  }`}
+                >
+                  Archive
+                </span>
                 {isDropdownOpen && (
                   <ul className={styles["dropdown-menu"]}>
                     <li>
@@ -58,10 +72,10 @@ const Header = () => {
                   </ul>
                 )}
               </li>
-              <li className="">
+              <li className={interview && "active"}>
                 <Link href={"/podcast"}>Interview With Authors</Link>
               </li>
-              <li className="">
+              <li className={about && "active"}>
                 <Link href={"/about"}>About Us</Link>
               </li>
             </ul>

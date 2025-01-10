@@ -94,10 +94,6 @@
   visibility: visible;
 }
 
-/* .dropdown-menu li {
-  margin: 0.5rem 0;
-} */
-
 .dropdown-menu li a {
   text-decoration: none;
   color: #ff5480;
@@ -105,10 +101,6 @@
   display: block;
   font-weight: 600;
 }
-
-
-
-
 
 .mobile {
   position: absolute;
@@ -164,6 +156,13 @@
   transition: 0.4s;
 
   color: #ff5480;
+}
+@media (max-width: 1024px) {
+  .socials {
+    display: none;
+  }
+
+  
 }
 @media (max-width: 768px) {
   .navbar,

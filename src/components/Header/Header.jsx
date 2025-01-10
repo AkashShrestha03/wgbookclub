@@ -33,15 +33,15 @@ const Header = () => {
     <>
       <Toaster position="top-center" reverseOrder={false} />
       <section className={styles["main-header"]}>
-        <header className="row">
+        <header className="row justify-content-evenly">
           <Link
             href={"/"}
-            className="logo-container col-md-3"
+            className="logo-container col-xl-3 col-md-3"
             style={{ width: "fit-content", zIndex: 2 }}
           >
             <Image src={"/logo/logo.svg"} width={190} height={87} />
           </Link>
-          <div className={`col-md-6 ${styles.navbar}`}>
+          <div className={`col-xl-6 col-md-9 ${styles.navbar}`}>
             <ul className="nav-links w-100 text-center pt-2">
               <li className={`col-md-3 ${BOM && "active"}`}>
                 <Link href={"/bookofthemonth"}>Book Of The Month</Link>
@@ -80,7 +80,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <div className={`col-md-3 ${styles.socials}`}>
+          <div className={`col-xl-2 col-md-3 ${styles.socials}`}>
             <Link
               href={`https://youtube.com/@womenandgenderbookclub?si=2HU7FgkXVnn7Mbz9
 `}

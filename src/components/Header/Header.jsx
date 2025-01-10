@@ -33,7 +33,7 @@ const Header = () => {
     <>
       <Toaster position="top-center" reverseOrder={false} />
       <section className={styles["main-header"]}>
-        <header className="row justify-content-evenly">
+        <header className="row justify-content-between">
           <Link
             href={"/"}
             className="logo-container col-xl-3 col-md-3"

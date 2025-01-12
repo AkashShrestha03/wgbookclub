@@ -30,7 +30,7 @@ const BookOfTheMonth = () => {
   }, []);
 
   const handleReadMore = (id) => {
-    router.push(`/readmore?id=${id}`); // Navigate to the 'readmore' page with the ID as a query parameter
+    router.push(`/readmore?id=${id}`);
   };
 
   return (
@@ -56,10 +56,11 @@ const BookOfTheMonth = () => {
               </span>
               <h4>{book.title}</h4>
               <p>{book.AuthorName}</p>
-              {/* <p>
-                {book.VoteData.VoteMonth}, {book.VoteData.VoteYear}
-              </p> */}
-              <button onClick={() => handleReadMore(book.BookID)}>
+
+              <button
+                className="pink-btn"
+                onClick={() => handleReadMore(book.BookID)}
+              >
                 Read it here
               </button>
             </div>

@@ -31,3 +31,23 @@ body {
   transform: scale(1.1);
   font-weight: 700;
 }
+
+.pink-btn {
+  background: #ff0081;
+  border-radius: 3px;
+  border: 1px solid #ff5480;
+  outline: none;
+  height: 48px;
+  width: 170px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 24px;
+  transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.pink-btn:hover {
+  background: #fff;
+  color: #ff0081;
+  border: 1px solid #ff5480;
+}

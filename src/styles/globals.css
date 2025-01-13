@@ -11,6 +11,13 @@ a {
 
 body {
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
 }
 
 .list-group-item {
@@ -50,4 +57,24 @@ body {
   background: #fff;
   color: #ff0081;
   border: 1px solid #ff5480;
+}
+
+.white-btn {
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #ff0081;
+  outline: none;
+  height: 48px;
+  width: 170px;
+  color: #ff0081;
+  font-weight: 700;
+  line-height: 24px;
+  transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.white-btn:hover {
+  background: #ff0081;
+  color: #fff;
+  border: 1px solid #ff0081;
 }

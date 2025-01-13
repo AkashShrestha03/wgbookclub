@@ -25,7 +25,6 @@
 
 @media (max-width: 768px) {
   .footer-container footer {
-    
     text-align: center;
   }
   .socials {
@@ -36,7 +35,7 @@
     width: 100%;
   }
 
-  .footer-container{
-     padding: 10px 10px;
+  .footer-container {
+    padding: 10px 10px;
   }
 }

@@ -48,7 +48,10 @@ const BookHero = () => {
             {/* <p>
              {nominees?.review}
             </p> */}
-            <button className="mt-2" onClick={() => handleReadMore(nominees?.BookID)}>
+            <button
+              className="mt-2 white-btn"
+              onClick={() => handleReadMore(nominees?.BookID)}
+            >
               Read it here
             </button>
           </div>

@@ -6,9 +6,7 @@ import React from "react";
 const readmore = () => {
   return (
     <>
-      <Header />
       <Summary />
-      <Footer />
     </>
   );
 };

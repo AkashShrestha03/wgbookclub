@@ -6,9 +6,9 @@ import React from "react";
 const bookofthemonth = () => {
   return (
     <>
-      <Header />
+      
       <BOM />
-      <Footer />
+      
     </>
   );
 };

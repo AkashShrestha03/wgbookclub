@@ -6,9 +6,9 @@ import React from "react";
 const podcast = () => {
   return (
     <>
-      <Header />
+   
       <Podcast />
-      <Footer />
+      
     </>
   );
 };

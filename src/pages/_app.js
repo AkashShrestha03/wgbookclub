@@ -1,11 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/globals.css";
 import Script from "next/script";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />
+      <Header />
+      <main>
+        <Component {...pageProps} />
+      </main>
+      <Footer />
       <Script
         src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

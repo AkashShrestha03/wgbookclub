@@ -6,9 +6,9 @@ import React from "react";
 const about = () => {
   return (
     <>
-      <Header />
+     
       <About />
-      <Footer />
+     
     </>
   );
 };

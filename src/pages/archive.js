@@ -6,9 +6,9 @@ import React from "react";
 const archive = () => {
   return (
     <>
-      <Header />
+    
       <Archive />
-      <Footer />
+   
     </>
   );
 };

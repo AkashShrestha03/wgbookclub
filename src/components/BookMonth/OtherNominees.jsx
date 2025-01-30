@@ -55,7 +55,7 @@ const OtherNominees = () => {
               <p className="text-muted">
                 {nominee.Month}, {nominee.Year}
               </p>
-              <button onClick={() => handleReadMore(nominee?.BookID)}>
+              <button className="pink-btn" onClick={() => handleReadMore(nominee?.BookID)}>
                 Read it here
               </button>
             </div>
